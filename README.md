@@ -1,9 +1,7 @@
 # Logistics API (NearMade)
 
 ## Overview
-The Logistics API (NearMade) is a backend service built with Spring Boot, designed to handle delivery order management and intelligent route optimization. The core feature of this application is its ability to take a starting location and a list of unsorted delivery orders, and calculate the most efficient delivery route using a **Nearest Neighbor** algorithm based on geographic coordinates. 
-
-The application utilizes an in-memory H2 database for rapid development and testing, and exposes a clean set of RESTful endpoints for clients to interact with the system.
+The Logistics API (NearMade) is a backend service built with Spring Boot, designed to handle delivery order management and route optimization. The core feature of this application is its ability to take a starting location and a list of unsorted delivery orders, and calculate the most efficient delivery route.
 
 ## Installation Instructions
 
@@ -12,11 +10,10 @@ The application utilizes an in-memory H2 database for rapid development and test
 - Git (to clone the repository)
 
 ### Steps to Run
-This project includes the Maven Wrapper, meaning you do not need to have Maven pre-installed on your system to run it.
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-repository-url>
+   git clone https://github.com/shopnearmade/logistics-api.git
    cd logistics-api
    ```
 
@@ -25,7 +22,7 @@ This project includes the Maven Wrapper, meaning you do not need to have Maven p
    
    *On Windows:*
    ```cmd
-   mvnw.cmd spring-boot:run
+   mvn spring-boot:run  
    ```
    
    *On macOS/Linux:*
@@ -37,13 +34,10 @@ This project includes the Maven Wrapper, meaning you do not need to have Maven p
 
 4. **Access the Database (Optional):**
    You can access the H2 database console while the app is running by navigating to `http://localhost:8080/h2-console` in your web browser. 
-   - **JDBC URL:** `jdbc:h2:mem:nearmadedb`
-   - **User Name:** `sa`
-   - **Password:** *(leave blank)*
 
 ## Usage Instructions
 
-You can interact with the API using tools like Postman, Insomnia, or standard `curl` commands.
+You can interact with the API using tools like Postman, or `curl` commands.
 
 ### 1. Order Management Endpoints
 
