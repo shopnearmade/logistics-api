@@ -64,7 +64,6 @@ You can interact with the API using tools like Postman, or `curl` commands.
 
 ### 2. Route Optimization Endpoints
 
-- **Health Check**
   - **Method:** `GET`
   - **URL:** `/api/routes/ping`
   - **Response:** "NearMade Routing Engine is LIVE and ready for requests!"
