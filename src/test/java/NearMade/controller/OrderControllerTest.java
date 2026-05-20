@@ -68,7 +68,6 @@ public class OrderControllerTest {
     public void markAnOrderAsCompleted(){
         DeliveryOrder anOrder = new DeliveryOrder("12345", new Coordinate(1, 1));
         Mockito.when(orderRepository.findById(anOrder.getOrderId())).thenReturn(Optional.of(anOrder));
-        //Mockito.when(orderRepository.save(anOrder)).thenReturn(anOrder);
 
          orderController.markAnOrderAsCompleted(anOrder.getOrderId());
 
@@ -79,7 +78,7 @@ public class OrderControllerTest {
     public void markAnOrderAsCompleted_NotFound() {
         // Arrange
         String fakeId = "999";
-        // Tell the mock: "When someone asks for ID 999, return an EMPTY pizza box."
+
         Mockito.when(orderRepository.findById(fakeId)).thenReturn(Optional.empty());
 
         // Act & Assert

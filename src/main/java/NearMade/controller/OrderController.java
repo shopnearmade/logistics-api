@@ -25,7 +25,6 @@ public class OrderController {
     }
 
     // 1. Use PostMapping for saving data!
-    // 2. Return the saved object so we can see it in Postman!
     @PostMapping("/add")
     public DeliveryOrder addOrders(@Valid @RequestBody DeliveryOrder deliveryOrder) {
         return order.save(deliveryOrder);

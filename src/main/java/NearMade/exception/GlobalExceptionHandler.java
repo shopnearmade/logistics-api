@@ -18,7 +18,6 @@ public class GlobalExceptionHandler{
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ApiError> handleNotValidArgument(MethodArgumentNotValidException exception)  {
-        // need to review before push my changes and understand this line
         String errorMessage = exception.getBindingResult().getFieldError().getDefaultMessage();
         ApiError error = new ApiError(400,errorMessage);
 

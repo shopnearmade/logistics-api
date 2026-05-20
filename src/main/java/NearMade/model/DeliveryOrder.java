@@ -18,16 +18,16 @@ public class DeliveryOrder {
     @Column
     private boolean isDelivered;
 
-    // JPA and Jackson both require an empty default constructor! need to understand deeply
+    // JPA and Jackson both require an empty default constructor
     public DeliveryOrder() {
     }
 
-    // Constructor for NEW orders (We don't know the ID yet, so we don't ask for it!)
+    //constructor for NEW orders
     public DeliveryOrder(Coordinate dropoffLocation) {
         this.dropoffLocation = dropoffLocation;
     }
 
-    // Constructor for EXISTING orders (Used when retrieving from the database)
+    // constructor for existing orders
     public DeliveryOrder(String orderId, Coordinate dropoffLocation) {
         this.orderId = orderId;
         this.dropoffLocation = dropoffLocation;
